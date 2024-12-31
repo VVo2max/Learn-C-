@@ -1,38 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
-int q[114514],a[114514];
-int hh,tt=-1;
-int n,m,cnt=1;
+queue<int> q,p;
+int n,m,cnt;
 int main(){
 	cin>>n;
 	for(int i=1;i<=n;i++){
-		int p;
-		cin>>p;
-		q[++tt]=p;
-		a[tt]=i;
+		int o;
+		cin>>o;
+		q.push(o);
+		p.push(i);
 	}
 	cin>>m;
-	while(hh<tt){
-		if(cnt%m==0){ 
-			if(q[hh]==0){
-				q[hh]=1;
-				q[++tt]=q[hh];
-				a[tt]=a[hh];
-			}
-			else{
-				hh++;
-//				cout<<"aaaa"<<endl; 
-			}
+	while(!q.empty()){
+		for(int i=0;i<m-1;i++){
+			q.push(q.front());
+			q.pop();
+			p.push(p.front());
+			p.pop();
+		}
+		if(q.front()==0){
+			q.front()=1;
+			q.push(q.front());
+			q.pop();
+			p.push(p.front());
+			p.pop();
 		}
 		else{
-			q[++tt]=q[hh];
-			a[tt]=a[hh];
-			hh++;
+			q.pop();
+			p.pop(); 
 		}
-		cnt++;
-//		cout<<a[tt]<<" ";
 	}
-	cout<<a[tt];
+	cout<<p.back()<<endl;
 	return 0;
 }
-
