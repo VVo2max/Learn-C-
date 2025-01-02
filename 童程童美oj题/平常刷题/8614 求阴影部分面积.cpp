@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-	int n;
-	cin>>n;
-	cout<<n/13<<endl<<n%13<<endl; 
+	float a;
+	cin>>a;
+	cout<<fixed<<setprecision(2);
+	cout<<a*a/2; 
 	return 0;
 }
 
