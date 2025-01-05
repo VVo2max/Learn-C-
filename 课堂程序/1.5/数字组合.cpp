@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>//1 
 using namespace std;
 const int N=10;
 int a[N],n,m;

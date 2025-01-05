@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>//11 
 using namespace std;
 const int N=30;
 int n,m,ans;

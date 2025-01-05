@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>//gfhgfhgfh 
+#include<bits/stdc++.h>
 using namespace std;
 const int N=100;
 int d[8][2]={-2,1,-1,2,1,2,2,1,2,-1,1,-2,-1,-2,-2,-1};

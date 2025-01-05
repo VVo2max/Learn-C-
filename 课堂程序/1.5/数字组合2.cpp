@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>//1 
 using namespace std;
 const int N=22;
 int n,r;
